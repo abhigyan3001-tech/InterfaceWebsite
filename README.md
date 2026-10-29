@@ -6,7 +6,18 @@ Interface AI is an early-stage initiative building domain-independent data migra
 
 ## Website
 
-The public-facing website is in [index.html](index.html). It is a standalone, responsive HTML page with inline styling, JavaScript and an inline SVG logo. Open it locally in a browser to preview.
+The public-facing website is a static, responsive site with no build step:
+
+| File | Purpose |
+| --- | --- |
+| [index.html](index.html) | Home page |
+| [privacy.html](privacy.html) | Privacy policy |
+| [assets/styles.css](assets/styles.css) | Shared styles |
+| [assets/main.js](assets/main.js) | Footer year and "copy email" button |
+| [favicon.svg](favicon.svg) | Browser tab icon / logo |
+| [.htaccess](.htaccess) | HTTPS redirect, security headers and caching (Apache/Hostinger) |
+
+Open `index.html` locally in a browser to preview.
 
 ## Our initial products
 
@@ -33,11 +44,11 @@ See [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) and [docs/DEPLOYMENT.md](do
 
 ## Hosting on Hostinger
 
-Upload the root `index.html` into the domain's `public_html` directory using Hostinger hPanel File Manager. See deployment documentation for details.
+Upload the site files (`index.html`, `privacy.html`, `favicon.svg`, `.htaccess` and the `assets/` folder) into the domain's `public_html` directory using Hostinger hPanel File Manager. See deployment documentation for details.
 
 ## Contact
 
-The website currently references `hello@interfaceai.io`. Confirm this mailbox is active before publishing.
+The website uses `contact@interfaceai.io`. Send a test email to it and confirm it is received before publishing.
 
 ## Disclaimer
 
