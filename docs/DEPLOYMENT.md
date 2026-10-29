@@ -13,7 +13,7 @@
 6. Visit `https://interfaceai.io` and test navigation and contact links.
 7. If the domain is not pointing to this Hostinger hosting plan, configure its DNS according to the hosting account's instructions and wait for propagation.
 8. Enable SSL in Hostinger **before** relying on `.htaccess`, which redirects all traffic to HTTPS. Then check that `http://interfaceai.io` redirects to `https://`.
-9. Send a test email to `contact@interface.io` and confirm it arrives.
+9. Send a test email to `contact@interfaceai.io` and confirm it arrives.
 10. Optionally verify the security headers at https://securityheaders.com.
 
 If the site shows a 500 error after uploading `.htaccess`, the host does not allow one of its directives; rename the file to `.htaccess.off` and contact Hostinger support.

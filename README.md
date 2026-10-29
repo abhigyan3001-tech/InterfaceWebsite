@@ -48,7 +48,7 @@ Upload the site files (`index.html`, `privacy.html`, `favicon.svg`, `.htaccess` 
 
 ## Contact
 
-The website uses `contact@interface.io`. Send a test email to it and confirm it is received before publishing.
+The website uses `contact@interfaceai.io`. Send a test email to it and confirm it is received before publishing.
 
 ## Disclaimer
 
