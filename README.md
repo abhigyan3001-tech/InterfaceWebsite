@@ -11,9 +11,11 @@ The public-facing website is a static, responsive site with no build step:
 | File | Purpose |
 | --- | --- |
 | [index.html](index.html) | Home page |
+| [contact.html](contact.html) | Contact form (name, email, description) |
+| [contact.php](contact.php) | Emails contact form submissions to `contact@interfaceai.io` (needs PHP 8.1+) |
 | [privacy.html](privacy.html) | Privacy policy |
 | [assets/styles.css](assets/styles.css) | Shared styles |
-| [assets/main.js](assets/main.js) | Footer year and "copy email" button |
+| [assets/main.js](assets/main.js) | Footer year, "copy email" button and contact form submission |
 | [favicon.svg](favicon.svg) | Browser tab icon / logo |
 | [.htaccess](.htaccess) | HTTPS redirect, security headers and caching (Apache/Hostinger) |
 
