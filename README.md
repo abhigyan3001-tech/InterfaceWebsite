@@ -44,7 +44,7 @@ See [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) and [docs/DEPLOYMENT.md](do
 
 ## Hosting on Hostinger
 
-Upload the site files (`index.html`, `privacy.html`, `favicon.svg`, `.htaccess` and the `assets/` folder) into the domain's `public_html` directory using Hostinger hPanel File Manager. See deployment documentation for details.
+The site deploys automatically from the `main` branch using Hostinger's Git integration and a GitHub webhook. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the one-time setup and the manual-upload fallback.
 
 ## Contact
 

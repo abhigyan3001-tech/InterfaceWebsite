@@ -21,3 +21,31 @@ If the site shows a 500 error after uploading `.htaccess`, the host does not all
 The site is static: no Node.js, database, build step, or server-side app is required. CSS and JavaScript are in `assets/` so that the Content-Security-Policy in `.htaccess` can block inline scripts.
 
 **Note:** Uploading to GitHub does not automatically deploy to Hostinger. A separate deployment integration or manual upload is required.
+
+## Automatic deployment (Hostinger Git integration)
+
+Every push to `main` can update the live site automatically.
+
+### One-time setup
+1. In hPanel, open **Websites → Manage** for `interfaceai.io`, then **Advanced → Git**.
+2. Hostinger can only deploy into an **empty** folder. Back up `public_html` (download it from File Manager), then delete its contents.
+3. Under **Create a New Repository**, enter:
+   - **Repository:** `https://github.com/abhigyan3001-tech/InterfaceWebsite.git`
+   - **Branch:** `main`
+   - **Directory:** leave empty (deploys into `public_html`)
+4. Click **Create**, then **Deploy** in the list below it. Check that `https://interfaceai.io` loads.
+5. In the same list, click **Auto Deployment** and copy the **Webhook URL**.
+6. In GitHub, open the repository's **Settings → Webhooks → Add webhook**:
+   - **Payload URL:** the webhook URL from step 5
+   - **Content type:** `application/json`
+   - **Events:** *Just the push event*
+   - Save, and check that the delivery shows a green tick under **Recent Deliveries**.
+
+The repository is public, so no SSH/deploy key is needed. If it is made private, copy the SSH key shown in hPanel's Git section into GitHub's **Settings → Deploy keys** and use the SSH clone URL (`git@github.com:abhigyan3001-tech/InterfaceWebsite.git`) instead.
+
+### After setup
+- Merge or push to `main` → the webhook triggers Hostinger to pull the latest files, usually within a minute.
+- To roll back, revert the commit on `main` and push.
+- Don't edit files in `public_html` via File Manager: the next deployment can fail or overwrite them.
+- `.htaccess` returns 403 Forbidden for `.git/`, `docs/` and `*.md`, because the whole repository is cloned into `public_html`.
+

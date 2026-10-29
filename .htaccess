@@ -8,6 +8,13 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Don't list directory contents
 Options -Indexes
 
+# Hostinger Git deployment clones the whole repository into public_html.
+# Block repository-only files (.git, docs, Markdown) with 403 Forbidden. .well-known stays reachable for SSL checks.
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^docs(/|$) - [F,L]
+RewriteRule \.md$ - [F,L]
+
 <IfModule mod_headers.c>
   # Remember to use HTTPS for 1 year. Only add "; includeSubDomains; preload" once every subdomain is on HTTPS.
   Header always set Strict-Transport-Security "max-age=31536000"
