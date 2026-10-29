@@ -77,4 +77,4 @@ if (!mail(TO_EMAIL, $subject, $body, $headers, '-f' . FROM_EMAIL)) {
 $recent[] = time();
 @file_put_contents($rateFile, json_encode($recent), LOCK_EX);
 
-respond(true, 'sent', "Thanks! Your message has been sent. We'll reply to you by email.");
+respond(true, 'sent', "Thank you for reaching out! We've received your request and will get back to you by email soon.");

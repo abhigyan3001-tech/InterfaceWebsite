@@ -59,3 +59,9 @@ The repository is public, so no SSH/deploy key is needed. If it is made private,
 - If messages land in spam, make sure the domain's SPF record allows Hostinger to send for `interfaceai.io` (hPanel → **Emails → Email deliverability**, or **Domains → DNS / Nameservers**). If the mailbox is hosted elsewhere, add Hostinger to that SPF record rather than creating a second one.
 - Each visitor can send up to 5 messages per hour. A hidden field silently discards most bot submissions.
 
+
+## Updating CSS or JavaScript (cache busting)
+
+Browsers and Hostinger's CDN cache `assets/styles.css` and `assets/main.js` for up to 7 days. Every page links them with a version number, e.g. `assets/styles.css?v=3`.
+
+**Whenever you change either file, increase the number on every page** (`index.html`, `contact.html`, `privacy.html`), e.g. `?v=3` → `?v=4`. Otherwise visitors may keep seeing the old styles. If a change still doesn't show after deploying, use **Cache → Clear cache** on the website's hPanel dashboard.

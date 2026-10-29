@@ -5,40 +5,77 @@
 <meta name="description" content="Contact Interface AI about your data migration challenge.">
 <title>Contact Us — Interface AI</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles.css?v=3">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Interface AI home"><img class="logo" src="favicon.svg" width="43" height="43" alt="">Interface AI</a><nav class="links" aria-label="Main"><a href="index.html#what">What we do</a><a href="index.html#how">How it works</a><a href="index.html#products">Products</a><a href="index.html#about">About</a><a href="contact.html" aria-current="page">Contact</a></nav><a class="btn" href="contact.html">Get in touch</a></div></header>
-<main id="main" tabindex="-1"><div class="wrap contact-page">
-<div class="contact-intro">
+<main id="main" tabindex="-1">
+<div class="hero page-hero"><div class="wrap">
 <div class="eyebrow">Contact us</div>
-<h1>Have a migration challenge?</h1>
-<p>Tell us about your source system, destination requirements and the data you need to move. We'll get back to you by email.</p>
-<p>Prefer email? Write to <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a>.</p>
-<p class="form-help">Please don't include real customer records or other confidential data. See our <a href="privacy.html">privacy policy</a>.</p>
-</div>
+<h1>Have a migration <em>challenge?</em></h1>
+<p class="lead">Tell us a little about your source system, destination requirements and the data you need to move. We'll review your request and get back to you by email.</p>
+</div></div>
+
+<section class="page-body"><div class="wrap contact-layout">
 <form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
-<div id="contact-status" class="form-status" role="status" aria-live="polite" hidden></div>
+<div class="form-head">
+<h2>Send us a request</h2>
+<p class="form-help">All fields are required. It only takes a minute.</p>
+</div>
+<div id="contact-status" class="form-status" role="alert" hidden></div>
+<div class="form-row">
 <div class="form-field">
 <label for="contact-name">Name</label>
-<input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+<input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="e.g. Priya Sharma" required>
 </div>
 <div class="form-field">
 <label for="contact-email">Email</label>
-<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@company.com" required>
+</div>
 </div>
 <div class="form-field">
 <label for="contact-description">Description</label>
-<textarea id="contact-description" name="description" rows="6" minlength="10" maxlength="3000" required></textarea>
+<textarea id="contact-description" name="description" rows="6" minlength="10" maxlength="3000" placeholder="What are you migrating, from which system, and to where? Any formats, volumes or timelines that matter?" aria-describedby="description-count" required></textarea>
+<div class="field-meta"><span>Please don't include real customer records or confidential data.</span><span id="description-count" aria-live="polite">0 / 3000</span></div>
 </div>
 <div class="form-trap" aria-hidden="true">
 <label for="contact-website">Leave this field empty</label>
 <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
 </div>
-<button class="btn" type="submit">Send message</button>
+<div class="form-actions">
+<button class="btn" type="submit">Send request <span aria-hidden="true">→</span></button>
+<p class="form-help">By sending, you agree to our <a href="privacy.html">privacy policy</a>.</p>
+</div>
 </form>
-</div></main>
+
+<aside class="contact-aside" aria-label="What happens next">
+<div class="card">
+<div class="eyebrow">What happens next</div>
+<ol class="next-steps">
+<li><span class="number">01</span><div><h3>We read your request</h3><p>Our team reviews the systems, formats and goals you describe.</p></div></li>
+<li><span class="number">02</span><div><h3>We get back to you</h3><p>You'll hear from us by email with questions or next steps.</p></div></li>
+<li><span class="number">03</span><div><h3>We explore it together</h3><p>If it's a good fit, we'll set up a conversation about your migration.</p></div></li>
+</ol>
+</div>
+<div class="card contact-direct">
+<span class="icon" aria-hidden="true">✉</span>
+<div><h3>Prefer email?</h3><p>Write to us at <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a></p></div>
+</div>
+</aside>
+</div></section>
+</main>
+
+<dialog id="contact-success" class="modal" aria-labelledby="modal-title" aria-describedby="modal-text">
+<div class="modal-card">
+<button type="button" class="modal-close" data-close aria-label="Close">×</button>
+<span class="modal-icon" aria-hidden="true">✓</span>
+<h2 id="modal-title">Thank you for reaching out!</h2>
+<p id="modal-text">We've received your request and really appreciate you sharing it with us. Our team will review the details carefully and get back to you by email soon.</p>
+<button type="button" class="btn" data-close>Close</button>
+</div>
+</dialog>
+
 <footer><div class="wrap foot"><span>© <span data-year>2026</span> Interface AI. All rights reserved. · <a href="privacy.html">Privacy policy</a> · <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a></span><span>Any Source. Any Format. Any Destination.</span></div></footer>
-<script src="assets/main.js" defer></script>
+<script src="assets/main.js?v=3" defer></script>
 </body></html>
