@@ -5,11 +5,16 @@
 <meta name="description" content="How Interface AI handles the personal information you share with us.">
 <title>Privacy Policy — Interface AI</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css?v=3">
+<link rel="stylesheet" href="assets/styles.css?v=4">
+<script>
+(function(){var t=localStorage.getItem('interface_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+</script>
 </head>
 <body>
+<canvas id="network-canvas" class="network-canvas" aria-hidden="true"></canvas>
+<audio id="local-audio" preload="metadata" loop></audio>
 <a class="skip-link" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Interface AI home"><img class="logo" src="favicon.svg" width="43" height="43" alt="">Interface AI</a><nav class="links" aria-label="Main"><a href="index.html#what">What we do</a><a href="index.html#how">How it works</a><a href="index.html#products">Products</a><a href="index.html#about">About</a><a href="contact.html">Contact</a></nav><a class="btn" href="contact.html">Get in touch</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Interface AI home"><span class="brand-logo" aria-hidden="true"><img class="logo logo-light" src="assets/logo-light.svg" width="43" height="43" alt=""><img class="logo logo-dark" src="assets/logo-dark.svg" width="43" height="43" alt=""></span>Interface AI</a><nav class="links" aria-label="Main"><a href="index.html#what">What we do</a><a href="index.html#how">How it works</a><a href="index.html#products">Products</a><a href="index.html#about">About us</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><div class="nav-controls"><div class="music-player-wrap"><div class="music-btn-group"><button id="music-toggle" class="control-btn music-play-btn" type="button" aria-label="Play music" title="Play music (Summer Is Gone)"><span class="sound-bars" aria-hidden="true"><span class="bar bar-1"></span><span class="bar bar-2"></span><span class="bar bar-3"></span></span><svg class="sound-icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></button><button id="music-menu-btn" class="control-btn music-chevron-btn" type="button" aria-label="Select music type" title="Select music type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></div><div id="music-popover" class="music-popover" hidden><div class="popover-header"><div class="popover-title"><span class="music-status-dot"></span><span id="current-track-name">Summer Is Gone</span></div><span class="popover-badge">Soft Rock</span></div><div class="music-types-list"><div class="music-type-option is-selected" data-type="summer-is-gone"><input type="radio" name="music-type" value="summer-is-gone" checked><div class="option-info"><span class="option-title">🎸 Summer Is Gone</span><span class="option-sub">Zambolino · Soft Rock</span></div></div><div class="music-type-option" data-type="reflection"><input type="radio" name="music-type" value="reflection"><div class="option-info"><span class="option-title">🎸 Reflection</span><span class="option-sub">Hazelwood · Soft Rock</span></div></div><div class="music-type-option" data-type="joshua-tree"><input type="radio" name="music-type" value="joshua-tree"><div class="option-info"><span class="option-title">🎸 Joshua Tree</span><span class="option-sub">Guillermo Guareschi · Soft Rock</span></div></div><div class="music-type-option" data-type="silhouette"><input type="radio" name="music-type" value="silhouette"><div class="option-info"><span class="option-title">🎸 Silhouette</span><span class="option-sub">Moavii · Soft Rock</span></div></div><div class="music-type-option" data-type="ambient-synth"><input type="radio" name="music-type" value="ambient-synth"><div class="option-info"><span class="option-title">🌊 Ambient AI Flow</span><span class="option-sub">Procedural Synth · Offline</span></div></div></div><div class="popover-footer"><div class="volume-row"><span class="vol-icon" aria-hidden="true">🔈</span><input id="music-volume" type="range" min="0" max="100" value="20" aria-label="Music volume"><span class="vol-icon" aria-hidden="true">🔊</span></div></div></div></div><button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></button></div><a class="btn" href="contact.html">Get in touch</a></div></div></header>
 <main id="main" tabindex="-1">
 <div class="hero page-hero"><div class="wrap">
 <div class="eyebrow">Legal</div>
@@ -22,26 +27,26 @@
 
 <h2>What we collect</h2>
 <ul>
-<li><strong>Information you send us.</strong> If you use our contact form or email us, we receive your name, your email address and anything you write in your message, such as details about your organisation or migration project. Contact form messages are delivered to our team by email.</li>
+<li><strong>Information you send us.</strong> If you use our contact form or email us, we receive your name, your email address and anything you write in your message, such as details about your organization or integration project. Contact form messages are delivered to our team by email.</li>
 <li><strong>Technical data.</strong> Our hosting provider automatically records standard server logs (such as IP address, browser type and pages requested) to operate and secure the website.</li>
 </ul>
 <p>This website does not use cookies, advertising trackers or third-party analytics.</p>
 
 <h2>How we use it</h2>
 <ul>
-<li>To reply to your enquiry and follow up on conversations you start with us.</li>
+<li>To reply to your inquiry and follow up on conversations you start with us.</li>
 <li>To keep the website secure and working properly.</li>
 </ul>
 <p>We do not sell your personal information or use it for third-party advertising.</p>
 
 <h2>Please don't send sensitive data</h2>
-<p>When describing a migration challenge, please do not email us real customer records, policy data, health or financial information, or other confidential data. A description of the systems and formats involved is all we need to start a conversation.</p>
+<p>When describing an integration or migration challenge, please do not email us real customer records, policy data, health or financial information, or other confidential data. A description of the systems and formats involved is all we need to start a conversation.</p>
 
 <h2>Who we share it with</h2>
 <p>We share information only with service providers who help us run this website and our email (for example our web hosting and email providers), and only as needed for those services, or where required by law.</p>
 
 <h2>How long we keep it</h2>
-<p>We keep enquiry emails only as long as needed to respond and manage any resulting business relationship, and then delete them. Server logs are retained according to our hosting provider's standard retention period.</p>
+<p>We keep inquiry emails only as long as needed to respond and manage any resulting business relationship, and then delete them. Server logs are retained according to our hosting provider's standard retention period.</p>
 
 <h2>Your rights</h2>
 <p>Depending on where you live, you may have the right to access, correct or delete the personal information we hold about you, or to object to how we use it. To make a request, email <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a>.</p>
@@ -55,4 +60,6 @@
 </main>
 <footer><div class="wrap foot"><span>© <span data-year>2026</span> Interface AI. All rights reserved. · <a href="privacy.html">Privacy policy</a> · <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a></span><span>Any Source. Any Format. Any Destination.</span></div></footer>
 <script src="assets/main.js?v=3" defer></script>
+<script src="assets/network.js" defer></script>
+<script src="assets/controls.js?v=4" defer></script>
 </body></html>

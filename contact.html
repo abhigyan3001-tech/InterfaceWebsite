@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Contact Interface AI about your data migration challenge.">
+<meta name="description" content="Connect with the Interface AI team about your enterprise data integration, anti-EDI parsing, or schema translation requirements.">
 <title>Contact Us — Interface AI</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css?v=3">
+<link rel="stylesheet" href="assets/styles.css?v=4">
+<script>
+(function(){var t=localStorage.getItem('interface_theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+</script>
 </head>
 <body>
+<canvas id="network-canvas" class="network-canvas" aria-hidden="true"></canvas>
+<audio id="local-audio" preload="metadata" loop></audio>
 <a class="skip-link" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Interface AI home"><img class="logo" src="favicon.svg" width="43" height="43" alt="">Interface AI</a><nav class="links" aria-label="Main"><a href="index.html#what">What we do</a><a href="index.html#how">How it works</a><a href="index.html#products">Products</a><a href="index.html#about">About</a><a href="contact.html" aria-current="page">Contact</a></nav><a class="btn" href="contact.html">Get in touch</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Interface AI home"><span class="brand-logo" aria-hidden="true"><img class="logo logo-light" src="assets/logo-light.svg" width="43" height="43" alt=""><img class="logo logo-dark" src="assets/logo-dark.svg" width="43" height="43" alt=""></span>Interface AI</a><nav class="links" aria-label="Main"><a href="index.html#what">What we do</a><a href="index.html#how">How it works</a><a href="index.html#products">Products</a><a href="index.html#about">About us</a><a href="contact.html" aria-current="page">Contact</a></nav><div class="nav-actions"><div class="nav-controls"><div class="music-player-wrap"><div class="music-btn-group"><button id="music-toggle" class="control-btn music-play-btn" type="button" aria-label="Play music" title="Play music (Summer Is Gone)"><span class="sound-bars" aria-hidden="true"><span class="bar bar-1"></span><span class="bar bar-2"></span><span class="bar bar-3"></span></span><svg class="sound-icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg></button><button id="music-menu-btn" class="control-btn music-chevron-btn" type="button" aria-label="Select music type" title="Select music type"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button></div><div id="music-popover" class="music-popover" hidden><div class="popover-header"><div class="popover-title"><span class="music-status-dot"></span><span id="current-track-name">Summer Is Gone</span></div><span class="popover-badge">Soft Rock</span></div><div class="music-types-list"><div class="music-type-option is-selected" data-type="summer-is-gone"><input type="radio" name="music-type" value="summer-is-gone" checked><div class="option-info"><span class="option-title">🎸 Summer Is Gone</span><span class="option-sub">Zambolino · Soft Rock</span></div></div><div class="music-type-option" data-type="reflection"><input type="radio" name="music-type" value="reflection"><div class="option-info"><span class="option-title">🎸 Reflection</span><span class="option-sub">Hazelwood · Soft Rock</span></div></div><div class="music-type-option" data-type="joshua-tree"><input type="radio" name="music-type" value="joshua-tree"><div class="option-info"><span class="option-title">🎸 Joshua Tree</span><span class="option-sub">Guillermo Guareschi · Soft Rock</span></div></div><div class="music-type-option" data-type="silhouette"><input type="radio" name="music-type" value="silhouette"><div class="option-info"><span class="option-title">🎸 Silhouette</span><span class="option-sub">Moavii · Soft Rock</span></div></div><div class="music-type-option" data-type="ambient-synth"><input type="radio" name="music-type" value="ambient-synth"><div class="option-info"><span class="option-title">🌊 Ambient AI Flow</span><span class="option-sub">Procedural Synth · Offline</span></div></div></div><div class="popover-footer"><div class="volume-row"><span class="vol-icon" aria-hidden="true">🔈</span><input id="music-volume" type="range" min="0" max="100" value="20" aria-label="Music volume"><span class="vol-icon" aria-hidden="true">🔊</span></div></div></div></div><button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle light and dark mode" title="Toggle light and dark mode"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></button></div><a class="btn" href="contact.html">Get in touch</a></div></div></header>
 <main id="main" tabindex="-1">
 <div class="hero page-hero"><div class="wrap">
 <div class="eyebrow">Contact us</div>
-<h1>Have a migration <em>challenge?</em></h1>
-<p class="lead">Tell us a little about your source system, destination requirements and the data you need to move. We'll review your request and get back to you by email.</p>
+<h1>Have an integration <em>challenge?</em></h1>
+<p class="lead">Tell us about your source systems, destination schemas, and data pipelines. Our engineering team will review your specifications and get back to you promptly.</p>
 </div></div>
 
 <section class="page-body"><div class="wrap contact-layout">
 <form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
 <div class="form-head">
-<h2>Send us a request</h2>
+<h2>Send us your requirements</h2>
 <p class="form-help">All fields are required. It only takes a minute.</p>
 </div>
 <div id="contact-status" class="form-status" role="alert" hidden></div>
@@ -36,7 +41,7 @@
 </div>
 <div class="form-field">
 <label for="contact-description">Description</label>
-<textarea id="contact-description" name="description" rows="6" minlength="10" maxlength="3000" placeholder="What are you migrating, from which system, and to where? Any formats, volumes or timelines that matter?" aria-describedby="description-count" required></textarea>
+<textarea id="contact-description" name="description" rows="6" minlength="10" maxlength="3000" placeholder="What systems or formats are you looking to integrate or migrate (e.g. EDI, legacy ERP, custom files, OpenAPI)? Tell us about your data volumes and pipeline requirements." aria-describedby="description-count" required></textarea>
 <div class="field-meta"><span>Please don't include real customer records or confidential data.</span><span id="description-count" aria-live="polite">0 / 3000</span></div>
 </div>
 <div class="form-trap" aria-hidden="true">
@@ -44,7 +49,7 @@
 <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
 </div>
 <div class="form-actions">
-<button class="btn" type="submit">Send request <span aria-hidden="true">→</span></button>
+<button class="btn" type="submit">Send inquiry <span aria-hidden="true">→</span></button>
 <p class="form-help">By sending, you agree to our <a href="privacy.html">privacy policy</a>.</p>
 </div>
 </form>
@@ -53,9 +58,9 @@
 <div class="card">
 <div class="eyebrow">What happens next</div>
 <ol class="next-steps">
-<li><span class="number">01</span><div><h3>We read your request</h3><p>Our team reviews the systems, formats and goals you describe.</p></div></li>
-<li><span class="number">02</span><div><h3>We get back to you</h3><p>You'll hear from us by email with questions or next steps.</p></div></li>
-<li><span class="number">03</span><div><h3>We explore it together</h3><p>If it's a good fit, we'll set up a conversation about your migration.</p></div></li>
+<li><span class="number">01</span><div><h3>We review your request</h3><p>Our engineering team analyzes the systems, schemas, and integration goals you describe.</p></div></li>
+<li><span class="number">02</span><div><h3>We get back to you</h3><p>You'll hear from us by email with technical recommendations and next steps.</p></div></li>
+<li><span class="number">03</span><div><h3>Technical walkthrough</h3><p>If it's a good fit, we'll schedule a technical discussion or architecture demo.</p></div></li>
 </ol>
 </div>
 <div class="card contact-direct">
@@ -78,4 +83,6 @@
 
 <footer><div class="wrap foot"><span>© <span data-year>2026</span> Interface AI. All rights reserved. · <a href="privacy.html">Privacy policy</a> · <a href="mailto:contact@interfaceai.io">contact@interfaceai.io</a></span><span>Any Source. Any Format. Any Destination.</span></div></footer>
 <script src="assets/main.js?v=3" defer></script>
+<script src="assets/network.js" defer></script>
+<script src="assets/controls.js?v=4" defer></script>
 </body></html>

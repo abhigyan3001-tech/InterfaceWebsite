@@ -1,5 +1,5 @@
 <?php
-// Handles the contact form on contact.html and emails the enquiry to the team.
+// Handles the contact form on contact.html and emails the inquiry to the team.
 // Responds with JSON when called from the page's script, otherwise redirects back with ?status=...
 
 declare(strict_types=1);

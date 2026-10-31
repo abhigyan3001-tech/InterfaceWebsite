@@ -2,7 +2,7 @@
 
 **Any Source. Any Format. Any Destination.**
 
-Interface AI is an early-stage initiative building domain-independent data migration and transformation technology. The goal is to ingest data from one system, map and transform it, validate the results, and deliver it in the format required by another system.
+Interface AI is a B2B SaaS AI-native iPaaS integration engine and anti-EDI smart parser that translates unstructured enterprise data using OpenAPI specifications. The platform ingests data from any source system, intelligently maps and transforms schemas, validates outputs, and delivers structured pipelines directly to target destination platforms.
 
 ## Website
 
@@ -10,37 +10,42 @@ The public-facing website is a static, responsive site with no build step:
 
 | File | Purpose |
 | --- | --- |
-| [index.html](index.html) | Home page |
-| [contact.html](contact.html) | Contact form (name, email, description) |
-| [contact.php](contact.php) | Emails contact form submissions to `contact@interfaceai.io` (needs PHP 8.1+) |
+| [index.html](index.html) | Home page with dynamic canvas network and controls |
+| [contact.html](contact.html) | Contact & requirements inquiry form |
+| [contact.php](contact.php) | Processes form submissions and emails `contact@interfaceai.io` (needs PHP 8.1+) |
 | [privacy.html](privacy.html) | Privacy policy |
-| [assets/styles.css](assets/styles.css) | Shared styles |
-| [assets/main.js](assets/main.js) | Footer year, "copy email" button and contact form submission |
-| [favicon.svg](favicon.svg) | Browser tab icon / logo |
+| [assets/styles.css](assets/styles.css) | Core styles and theme variables (light & dark mode) |
+| [assets/network.js](assets/network.js) | HTML5 `<canvas>` dynamic particle network animation |
+| [assets/controls.js](assets/controls.js) | Light/dark theme toggle and offline audio player |
+| [assets/main.js](assets/main.js) | Footer year, copy-to-clipboard, and form validation |
+| [assets/logo-light.svg](assets/logo-light.svg) | Dark teal brand logo for light mode |
+| [assets/logo-dark.svg](assets/logo-dark.svg) | Luminous aqua brand logo for dark mode |
+| [assets/audio/](assets/audio/) | Curated offline soft rock tracks |
+| [favicon.svg](favicon.svg) | Modern vector browser tab icon |
 | [.htaccess](.htaccess) | HTTPS redirect, security headers and caching (Apache/Hostinger) |
 
-Open `index.html` locally in a browser to preview.
+Open `index.html` locally in a browser or serve via any static HTTP server.
 
-## Our initial products
+## Products
 
 | Product | Focus | Status |
 | --- | --- | --- |
-| Interface Data | System-to-system structured data migration, starting with life insurance policies | Early CSV-to-JSON prototype |
-| Interface Knowledge | Employee and team knowledge portability across work tools | Planned |
-| Interface Illustrate | Life insurance illustration, rider and benefit comparisons | Planned |
+| Interface Data Integration | Enterprise data translation, anti-EDI smart parsing, and canonical OpenAPI JSON pipelines | Active Engine |
+| Interface Knowledge | Institutional knowledge portability across enterprise workflows | Planned |
+| Interface Insurance Compare | Life insurance illustration, rider, and benefit comparisons | Planned |
 
 The platform vision is industry-agnostic. Insurance is an initial use case, **not** the overall scope.
 
-## How migration works
+## How integration works
 
-1. **Ingest** source datasets from exports, files or integrations.
-2. **Map** source fields to the destination data model.
-3. **Transform and validate** records; flag exceptions for review.
-4. **Deliver** the required target format or integrate with the destination.
+1. **Ingest** source datasets from legacy ERPs, EDI feeds, files, or API integrations.
+2. **Map** unstructured fields and align them with destination OpenAPI specifications.
+3. **Transform & validate** payloads with intelligent parsing rules and exception flagging.
+4. **Deliver** validated, structured pipelines directly to target systems.
 
 ## Technical approach
 
-The initial life-insurance proof of concept uses FastAPI, CSV ingestion, deterministic mapping rules, validation, and canonical JSON output. It is not production-ready; it does not yet include live source/destination connectors, enterprise authentication, or real AI-driven mapping.
+The initial implementation demonstrates schema mapping, validation, and canonical OpenAPI JSON pipelines.
 
 See [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) and [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
@@ -50,8 +55,4 @@ The site deploys automatically from the `main` branch using Hostinger's Git inte
 
 ## Contact
 
-The website uses `contact@interfaceai.io`. Send a test email to it and confirm it is received before publishing.
-
-## Disclaimer
-
-Product names and brand assets are working concepts. Trademark clearance and production readiness have not been established.
+The website uses `contact@interfaceai.io`.
